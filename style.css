@@ -1,0 +1,288 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: url(https://61e65b5b20b5dca4879085d6--inspiring-thompson-8451f7.netlify.app/static/media/background.c065e8b022dfff360d94.svg); */
+    background: linear-gradient(0deg, rgba(96, 159, 255, .05), rgba(96, 159, 255, .05)), url(https://61e65b5b20b5dca4879085d6--inspiring-thompson-8451f7.netlify.app/static/media/background.c065e8b022dfff360d94.svg);
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(96 159 255);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 0px 0px 20px 0px;
+    background-clip: content-box;
+}
+
+.titr {
+    font-size: 1.5em;
+    padding: 26px;
+    color: white;
+    font-weight: 600;
+}
+
+.pluss_div {
+    background-color: rgb(96 159 255);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.2;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    cursor: pointer;
+}
+
+.glass {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    background-color: rgba(143, 136, 136, 0.3);
+    z-index: 20;
+}
+
+.todo_titr {
+    width: 60%;
+    height: 260px;
+    background-color: white;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    z-index: 30;
+    padding: 20px;
+}
+
+.title {
+    padding-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.caption {
+    padding-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.input_todo {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid gainsboro;
+    font-size: 1em;
+}
+
+.input_todo:focus-visible {
+    outline: none;
+}
+
+.cancel,
+.add {
+    display: block;
+    position: absolute;
+    color: gray;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.add {
+    right: 20px;
+    bottom: 40px;
+}
+
+.cancel {
+    right: 80px;
+    bottom: 40px;
+}
+
+.cancel:hover,
+.add:hover {
+    color: lightblue;
+}
+
+.dno {
+    display: none;
+}
+
+.box_todo {
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.head_flex {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 2px 0px white;
+    padding: 3.5rem;
+    width: 70%;
+    min-height: 240px;
+    height: max-content;
+    flex-wrap: wrap;
+}
+
+.date {
+    display: flex;
+    height: min-content;
+    padding-bottom: 10px;
+}
+
+.day {
+    font-size: 3.5em;
+    padding: 5px;
+}
+
+.month {
+    font-size: 1em;
+}
+
+.year {
+    font-size: 1.2em;
+    color: rgb(84, 84, 84);
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.error {
+    width: 280px;
+    height: 65px;
+    background-color: #e74c3c;
+    position: fixed;
+    top: 30px;
+    right: -400px;
+    z-index: 20;
+}
+
+.right_error {
+    right: 20px !important;
+    transition: right 2s;
+}
+
+.svg_t {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    padding: 0px 5px;
+    box-sizing: content-box;
+}
+
+.text {
+    padding: 0px 20px;
+    color: white;
+}
+
+.close_error {
+    display: block;
+    text-align: right;
+    padding: 2px 10px;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes time {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0px;
+    }
+}
+
+.div_time {
+    width: 100%;
+    height: 7px;
+    background-color: rgb(255 179 165);
+    position: absolute;
+    bottom: 0px;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.todo_head {
+    width: 100%;
+    border-bottom: 2px solid #c7c7c7;
+    height: 60px;
+    padding: 18px 20px;
+    position: relative;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+.text_span {
+    padding: 0px 5px;
+    font-size: 18px;
+}
+
+.pen,
+.trash {
+    width: 20px;
+    height: 20px;
+    fill: red;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+}
+
+.pen {
+    right: 40px;
+    fill: blue;
+}
+
+.todos {
+    width: 100%;
+}
+
+.color_green {
+    background-color: #25e325;
+    padding: 3px;
+    color: white;
+    line-height: 0.4;
+    border-color: white;
+}
+
+.text_style {
+    text-decoration: line-through;
+}
+
+.select {
+    display: flex;
+    width: 213px;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    cursor: pointer;
+}
+
+.select span:hover {
+    color: blue;
+}
+
+.select span {
+    font-size: 15px;
+    font-weight: bold;
+}
